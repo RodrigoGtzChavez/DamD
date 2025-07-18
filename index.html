@@ -55,7 +55,6 @@
             object-fit: contain;
         }
 
-
         .nav-links {
             display: flex;
             list-style: none;
@@ -71,14 +70,11 @@
 
         .nav-links a:hover {
             color: #ccc;
-              }
-
-        
-        header 
-        {
-            display: none;
         }
 
+        header {
+            display: none;
+        }
 
         /* Hero Section */
         .hero {
@@ -140,12 +136,10 @@
             transform: translateY(-2px);
         }
 
-
-
-        /* Services Section */
-        .services {
+        /* Info Section */
+        .info-section {
             padding: 100px 0;
-            background: #fff;
+            background: #f8f8f8;
         }
 
         .section-title {
@@ -154,6 +148,105 @@
             margin-bottom: 60px;
             color: #000;
             font-weight: 300;
+        }
+
+        .info-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            margin-bottom: 80px;
+        }
+
+        .info-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #000;
+            font-weight: 400;
+        }
+
+        .info-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .info-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .info-text ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .info-text li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+            color: #555;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-text li:before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .comparison-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .comparison-box h4 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #000;
+            font-weight: 600;
+        }
+
+        .vs-divider {
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #666;
+            margin: 30px 0;
+        }
+
+        .highlight-box {
+            background: #000;
+            color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background: #fff;
         }
 
         .services-grid {
@@ -182,61 +275,52 @@
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 15px;
             font-weight: 500;
+        }
+
+        .service-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 20px 0;
         }
 
         .service-card p {
             opacity: 0.8;
             line-height: 1.8;
+            margin-bottom: 15px;
         }
 
-
-
-
-        /* About Section */
-        .about {
-            padding: 100px 0;
-            background: #f8f8f8;
+        .service-card .tagline {
+            font-style: italic;
+            opacity: 0.9;
+            font-size: 0.95rem;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            margin-top: 20px;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
+        .service-features {
+            text-align: left;
+            margin: 20px 0;
         }
 
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            color: #000;
-            font-weight: 300;
+        .service-features li {
+            list-style: none;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
         }
 
-        .about-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            color: #555;
-        }
-
-        .about-image {
-            background: #000;
-            height: 400px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .service-features li:before {
+            content: "✓";
             color: #fff;
-            font-size: 1.5rem;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
-        
-       
-
-
-        
 
         /* Contact Section */
         .contact {
@@ -346,13 +430,17 @@
                 font-size: 1.2rem;
             }
 
-            .about-content,
+            .info-content,
             .contact-content {
                 grid-template-columns: 1fr;
             }
 
             .services-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .comparison-box {
+                padding: 20px;
             }
         }
 
@@ -379,11 +467,10 @@
             <a href="#" class="logo">
                 <img src="logo.png" alt="DamD Logo" style="height: 120px;">
             </a>
-
             <ul class="nav-links">
                 <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#que-es">¿Qué es?</a></li>
                 <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -391,81 +478,130 @@
 
     <section id="inicio" class="hero">
         <div class="hero-content fade-in">
-             <img src="logo-blanco.png" alt="DamD - Detallado Automóvil a Domicilio"
+            <img src="logo-blanco.png" alt="DamD - Detallado Automóvil a Domicilio"
                 style="height: 350px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
-
-
-            <a href="#contacto" class="cta-button">Solicitar Servicio.</a>
+            <a href="#contacto" class="cta-button">Solicitar Servicio</a>
         </div>
     </section>
 
-    <section id="servicios" class="services">
+    <section id="que-es" class="info-section">
         <div class="container">
-        <!-- <h2 class="section-title">Nuestros Servicios</h2> -->
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"></div>                   
-                    <h3>Detallado Exterior</h3>
-
-                    <p>Limpieza en rines, llantas y molduras.</p>
-                    <p>Limpieza de Carroceria con técnica de pre-lavado y foam wash. </p>
-                    <p>Limpieza de cristales y espejos exteriores.</p>
-                    <p>Aplicación de cera para Brillo y Protección.</p>
-                    <h3><br>$800</h3>
-                    <p>"Perfecto para mantener tu carro limpio y con buena presencia sin invertir tanto"</p>
-
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>Detallado Completo </h3>
-                    <p>(Interior+Exterior)</p>
-                    <br>
-                    <p>Limpieza de carroceria con técnica de pre-lavado y foam wash. <br> 
-                       Limpieza de rines, llantas y molduras.</p>
-                        Aplicación de cera para Brillo y Protección.
-                        <p>Limpieza de Tablero, puertas, plásticos, consola. </p>
-                        Cristales limpios por dentro y por fuera.                       
-                        <h3><br>$1600</h3>
-                        <br>
-                    <p>"Limpieza completa por dentro y por fuera = Carro Presentable y Fresco."</p>
+            <h2 class="section-title">¿Qué es el Detallado Automotriz?</h2>
+            
+            <div class="info-content">
+                <div class="info-text">
+                    <p>El <strong>Detallado</strong> es algo más que un lavado de auto. Este se basa en un proceso meticuloso y especializado que va más allá de la limpieza superficial.</p>
                     
+                    <p>Mientras que un lavado convencional utiliza productos genéricos y técnicas básicas, el detailing emplea productos específicos para cada material y superficie del vehículo, siguiendo un protocolo riguroso para garantizar buenos resultados.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon"></div>
-                    <h3>Detallado Interior</h3>
-                    <br>                     
-                    <p>Aspirado profundo en alfombras, asientos y cajuela.</p>
-                    <p>Limpieza de plásticos, paneles, consola y puertas.</p>
-                    <p>Cristales interiores limpios.</p>
+                
+                <div class="comparison-box">
+                    <h4>🚗 Lavado Convencional:</h4>
+                    <ul>
+                        <li>Uso de jabón común y agua</li>
+                        <li>Limpieza superficial sin orden específico</li>
+                        <li>Secado básico con toallas regulares</li>
+                        <li>Sin protección posterior</li>
+                    </ul>
                     
-                        <h3><br>$900</h3>
-                        <br>
-                        <p>"Interior limpio =) Viaje Feliz"</p>
+                    <div class="vs-divider">VS</div>
+                    
+                    <h4>⭐ Detallado Automotriz:</h4>
+                    <ul>
+                        <li><strong>Pre-lavado:</strong> Eliminación de contaminantes adheridos</li>
+                        <li><strong>Foam Wash:</strong> Aplicación de espuma especializada</li>
+                        <li><strong>Técnica de dos baldes:</strong> Previene rayones</li>
+                        <li><strong>Productos específicos:</strong> Tratamiento adecuado para cada superficie</li>
+                        <li><strong>Protección final:</strong> Cera y/o sellador</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-box">
+                <h3>¿Por qué Elegir Detallado Automóvil a domicilio?</h3>
+               
+            </div>
+
+            <div class="info-content">
+                <div class="info-text">
+                    <h3>El Proceso Profesional</h3>
+                    <p>Cada servicio de detallado sigue un protocolo específico que incluye:</p>
+                    <ul>
+                        <li>Evaluación inicial del estado del vehículo</li>
+                        <li>Selección de productos específicos para cada material</li>
+                        <li>Aplicación de técnicas especializadas</li>
+                        <li>Protección y acabado final</li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="info-text">
+                    <h3>Garantía de Satisfacción</h3>
+                    <p>Nuestro enfoque combina:</p>
+                    <ul>
+                        <li><strong>Productos premium:</strong> Especializados para cada superficie</li>
+                        <li><strong>Herramientas profesionales:</strong> Equipos de alta calidad</li>
+                        <li><strong>Conocimiento especializado:</strong> Formación continua</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="nosotros" class="about">
+    <section id="servicios" class="services">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>¿Qué es el Detallado Automóvil?</h3>
-                    <br>
-                    <p> 
-                        En pocas palabras es como un super lavado de auto en esteroides y con lujo de atención en los detalles.
-                    <p> La belleza en Detallado Automotriz = Buen uso y equilibrio entre Productos + Herramientas + Tecnicas + Conocimiento + Experiencia:</p>
-                    <p> Garantía de Satisfaccion Garantizada.</p>
-                    <h3> ¿Qué NO es un Detallado Automóvil? </h3>
-                    <br>
-                    <p> No es Magia restauradora para milagrosamente dejar tu carro de vuelta como nuevo... 
-                        Aunque aun asi lo intentamos con todo nuestro esfuerzo y dedicación ;)</p>
-                    </p>
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
                     
+                    <h3>Detallado Exterior</h3>
+                    <div class="price">$800</div>
                     
+                    <div class="service-features">
+                        <li>Limpieza especializada de rines, llantas y molduras</li>
+                        <li>Carrocería con técnica de pre-lavado y foam wash</li>
+                        <li>Limpieza de cristales y espejos exteriores</li>
+                        <li>Aplicación de cera para brillo y protección</li>
+                    </div>
+                    
+                    <div class="tagline">
+                        "Perfecto para mantener tu carro limpio y con buena presencia sin invertir tanto"
+                    </div>
                 </div>
-                <div class="about-image">
-                    <p>Galería  </p>
+
+                <div class="service-card">
+                   
+                    <h3>Detallado Completo</h3>
+                    <p style="opacity: 0.8; margin-bottom: 15px;">(Interior + Exterior)</p>
+                    <div class="price">$1,600</div>
+                    
+                    <div class="service-features">
+                        <li>Carrocería con técnica de pre-lavado y foam wash</li>
+                        <li>Rines, llantas y molduras especializadas</li>
+                        <li>Aplicación de cera premium</li>
+                        <li>Limpieza de tablero, puertas, plásticos, consola</li>
+                        <li>Cristales limpios por dentro y por fuera</li>
+                    </div>
+                    
+                    <div class="tagline">
+                        "Limpieza completa por dentro y por fuera = Carro Presentable y Fresco"
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    
+                    <h3>Detallado Interior</h3>
+                    <div class="price">$900</div>
+                    
+                    <div class="service-features">
+                        <li>Aspirado profundo en alfombras, asientos y cajuela</li>
+                        <li>Limpieza de plásticos, paneles, consola y puertas</li>
+                        <li>Cristales interiores impecables</li>
+                    </div>
+                    
+                    <div class="tagline">
+                        "Interior limpio = Viaje Feliz"
+                    </div>
                 </div>
             </div>
         </div>
@@ -476,15 +612,17 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h2>Agendar cita</h2>
-                    <p>Estamos listos para brindar el mejor servicio de detallado automotriz en la comodidad de tu hogar.
-                        <p>Aclaración: <br>"Es importante considerar que los tiempos de servicio pueden variar en función del tipo de servicio solicitado y del estado actual del vehículo."</p>
-                    </p>
+                    <p>Estamos listos para brindar el mejor servicio de detallado automotriz en la comodidad de tu hogar.</p>
+                    <p><strong>⏱️ Duración estimada:</strong><br>
+• Servicio individual: 3–4 hrs<br>
+• Detallado completo: 7–8 hrs o más*</p>
+<p><small>*Puede variar según tamaño y estado del vehículo</small></p>
+
                     <ul class="contact-details">
                         <li>📱 WhatsApp: +52 844 464 1479</li>
-                        <li>📍 Saltillo, Coahuila. México. </li>
+                        <li>📍 Saltillo, Coahuila. México.</li>
                         <li>🕒 Horario: 8:00 AM - 6:00 PM</li>
                         <li><a href="https://www.facebook.com/DetalladoAutomovilDomicilio/" target="_blank" style="color: #2175e3; text-decoration: none;">Facebook</a></li>
-
                     </ul>
                 </div>
                 <div class="contact-form">
@@ -512,8 +650,6 @@
         </div>
     </section>
 
-    
-
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -532,7 +668,7 @@
         // Form submission
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('¡¨Por el momento este boton no funciona! Puedes llamar, Enviar mensaje via Whatsapp o Facebook.');
+            alert('¡Por el momento este botón no funciona! Puedes llamar, enviar mensaje vía WhatsApp o Facebook.');
             this.reset();
         });
 
