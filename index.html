@@ -43,14 +43,14 @@
         }
 
         .logo {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 600;
             color: #fff;
             text-decoration: none;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         .logo img {
-            height: 50px;
+            height: 45px;
             max-height: 100%;
             object-fit: contain;
         }
@@ -58,13 +58,14 @@
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 25px;
         }
 
         .nav-links a {
             color: #fff;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 400;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
 
@@ -101,34 +102,34 @@
 
         .hero-content {
             z-index: 2;
-            max-width: 800px;
+            max-width: 700px;
         }
 
         .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
+            font-size: 3rem;
+            margin-bottom: 15px;
             font-weight: 300;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 25px;
             opacity: 0.9;
             font-weight: 300;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 10px 25px;
+            padding: 12px 28px;
             background: #fff;
             color: #000;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            font-size: 0.9rem;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
             transition: all 0.3s ease;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .cta-button:hover {
@@ -138,44 +139,45 @@
 
         /* Info Section */
         .info-section {
-            padding: 100px 0;
+            padding: 80px 0;
             background: #f8f8f8;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
+            font-size: 2rem;
+            margin-bottom: 50px;
             color: #000;
-            font-weight: 300;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .info-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
             align-items: start;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         .info-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 30px;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
             color: #000;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .info-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 18px;
             color: #333;
             font-weight: 500;
         }
 
         .info-text p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
             color: #555;
         }
 
@@ -185,11 +187,11 @@
         }
 
         .info-text li {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 12px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 10px;
             color: #555;
-            padding-left: 20px;
+            padding-left: 18px;
             position: relative;
         }
 
@@ -203,63 +205,86 @@
 
         .comparison-box {
             background: #fff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 35px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .comparison-box h4 {
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 18px;
             color: #000;
             font-weight: 600;
         }
 
+        .comparison-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .comparison-box li {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            color: #555;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .comparison-box li:before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
         .vs-divider {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #666;
-            margin: 30px 0;
+            margin: 25px 0;
         }
 
         .highlight-box {
             background: #000;
             color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            margin: 40px 0;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 35px 0;
             text-align: center;
         }
 
         .highlight-box h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
             color: #fff;
+            font-weight: 500;
         }
 
         .highlight-box p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             opacity: 0.9;
         }
 
         /* Services Section */
         .services {
-            padding: 100px 0;
+            padding: 80px 0;
             background: #fff;
         }
 
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            gap: 35px;
         }
 
         .service-card {
             background: #000;
             color: #fff;
-            padding: 40px;
-            border-radius: 10px;
+            padding: 35px;
+            border-radius: 8px;
             text-align: center;
             transition: transform 0.3s ease;
         }
@@ -269,49 +294,53 @@
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 18px;
             opacity: 0.9;
         }
 
         .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
             font-weight: 500;
         }
 
         .service-card .price {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 700;
             color: #fff;
-            margin: 20px 0;
+            margin: 18px 0;
         }
 
         .service-card p {
             opacity: 0.8;
-            line-height: 1.8;
-            margin-bottom: 15px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
         }
 
         .service-card .tagline {
             font-style: italic;
             opacity: 0.9;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             border-top: 1px solid #333;
-            padding-top: 20px;
-            margin-top: 20px;
+            padding-top: 18px;
+            margin-top: 18px;
+            line-height: 1.5;
         }
 
         .service-features {
             text-align: left;
-            margin: 20px 0;
+            margin: 18px 0;
         }
 
         .service-features li {
             list-style: none;
-            padding: 8px 0;
-            padding-left: 20px;
+            padding: 6px 0;
+            padding-left: 18px;
             position: relative;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
         .service-features li:before {
@@ -324,7 +353,7 @@
 
         /* Contact Section */
         .contact {
-            padding: 100px 0;
+            padding: 80px 0;
             background: #000;
             color: #fff;
         }
@@ -332,19 +361,19 @@
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 50px;
         }
 
         .contact-info h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            font-weight: 300;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 400;
         }
 
         .contact-info p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 30px;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
             opacity: 0.9;
         }
 
@@ -353,36 +382,37 @@
         }
 
         .contact-details li {
-            margin-bottom: 15px;
-            font-size: 1.1rem;
+            margin-bottom: 12px;
+            font-size: 1rem;
             opacity: 0.9;
         }
 
         .contact-form {
             background: #111;
-            padding: 40px;
-            border-radius: 10px;
+            padding: 35px;
+            border-radius: 8px;
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 18px;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
+            padding: 12px;
             border: 1px solid #333;
-            border-radius: 5px;
+            border-radius: 4px;
             background: #000;
             color: #fff;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         .form-group input:focus,
@@ -394,10 +424,11 @@
         .submit-btn {
             background: #fff;
             color: #000;
-            padding: 15px 30px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 5px;
-            font-weight: 600;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 0.95rem;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -412,8 +443,9 @@
             background: #000;
             color: #fff;
             text-align: center;
-            padding: 40px 0;
+            padding: 35px 0;
             border-top: 1px solid #333;
+            font-size: 0.9rem;
         }
 
         /* Responsive */
@@ -423,16 +455,22 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
 
             .hero-subtitle {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 40px;
             }
 
             .info-content,
             .contact-content {
                 grid-template-columns: 1fr;
+                gap: 35px;
             }
 
             .services-grid {
@@ -440,7 +478,21 @@
             }
 
             .comparison-box {
-                padding: 20px;
+                padding: 25px;
+            }
+
+            .service-card {
+                padding: 25px;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .info-section,
+            .services,
+            .contact {
+                padding: 60px 0;
             }
         }
 
@@ -479,7 +531,7 @@
     <section id="inicio" class="hero">
         <div class="hero-content fade-in">
             <img src="logo-blanco.png" alt="DamD - Detallado Automóvil a Domicilio"
-                style="height: 350px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto;">
+                style="height: 300px; margin-bottom: 15px; display: block; margin-left: auto; margin-right: auto;">
             <a href="#contacto" class="cta-button">Solicitar Servicio</a>
         </div>
     </section>
@@ -572,7 +624,7 @@
                 <div class="service-card">
                    
                     <h3>Detallado Completo</h3>
-                    <p style="opacity: 0.8; margin-bottom: 15px;">(Interior + Exterior)</p>
+                    <p style="opacity: 0.8; margin-bottom: 12px;">(Interior + Exterior)</p>
                     <div class="price">$1,600</div>
                     
                     <div class="service-features">
@@ -627,15 +679,15 @@
                     </ul>
                 </div>
 
-                    <div class="contact-form" style="display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center; background: #111; padding: 40px; border-radius: 10px;">
+                    <div class="contact-form" style="display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center; background: #111; padding: 35px; border-radius: 8px;">
 
                         <a href="https://www.facebook.com/DetalladoAutomovilDomicilio" target="_blank" 
-                        style="display: inline-block; padding: 12px 24px; background-color: transparent; color: #fff; border: 1px solid #fff; border-radius: 6px; font-weight: 500; text-decoration: none; transition: all 0.3s ease;">
+                        style="display: inline-block; padding: 12px 24px; background-color: transparent; color: #fff; border: 1px solid #fff; border-radius: 6px; font-weight: 500; font-size: 0.95rem; text-decoration: none; transition: all 0.3s ease;">
                         📅 Programar Cita
                         </a>
 
                         <a href="https://t.me/detallado_autobot" target="_blank" 
-                        style="display: inline-block; padding: 12px 24px; background-color: transparent; color: #fff; border: 1px solid #fff; border-radius: 6px; font-weight: 500; text-decoration: none; transition: all 0.3s ease;">
+                        style="display: inline-block; padding: 12px 24px; background-color: transparent; color: #fff; border: 1px solid #fff; border-radius: 6px; font-weight: 500; font-size: 0.95rem; text-decoration: none; transition: all 0.3s ease;">
                         🤖 Más informes o dudas con nuestro Chatbot
                         </a>
 
