@@ -626,27 +626,32 @@
                         <li><a href="https://www.facebook.com/DetalladoAutomovilDomicilio/" target="_blank" style="color: #2175e3; text-decoration: none;">Facebook</a></li>
                     </ul>
                 </div>
-                <div class="contact-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="nombre">Nombre</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" id="telefono" name="telefono" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="servicio">Servicio de Interés</label>
-                            <input type="text" id="servicio" name="servicio" placeholder="Detallado Exterior, Detallado Interior, etc.">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe tu vehículo y cuándo te gustaría el servicio..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Agendar Cita</button>
-                    </form>
-                </div>
+
+                    <div class="contact-form" style="display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center; background: #111; padding: 40px; border-radius: 10px;">
+
+                        <a href="https://www.facebook.com/DetalladoAutomovilDomicilio" target="_blank" 
+                        style="display: inline-block; padding: 12px 24px; background-color: transparent; color: #fff; border: 1px solid #fff; border-radius: 6px; font-weight: 500; text-decoration: none; transition: all 0.3s ease;">
+                        📅 Programar Cita
+                        </a>
+
+                        <a href="https://t.me/detallado_autobot" target="_blank" 
+                        style="display: inline-block; padding: 12px 24px; background-color: transparent; color: #fff; border: 1px solid #fff; border-radius: 6px; font-weight: 500; text-decoration: none; transition: all 0.3s ease;">
+                        🤖 Más informes o dudas con nuestro Chatbot
+                        </a>
+
+                    </div>
+
+                    <style>
+                        .contact-form a:hover {
+                        background-color: #fff;
+                        color: #000;
+                        transform: scale(1.03);
+                    }
+                    </style>
+
+                                        
+                    </div>
+                
             </div>
         </div>
     </section>
@@ -667,11 +672,41 @@
         });
 
         // Form submission
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Por el momento este botón no funciona! Puedes llamar, enviar mensaje vía WhatsApp o Facebook.');
-            this.reset();
+       document.getElementById("contact-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const servicio = document.getElementById("servicio").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const datos = {
+        nombre,
+        telefono,
+        servicio,
+        mensaje
+    };
+
+    try {
+        const response = await fetch("https://fe9ad587-9fa0-408c-9618-f7706568e4bc-00-3rhqrecqcpwa2.kirk.replit.dev/formulario", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(datos)
         });
+
+        if (response.ok) {
+            alert("¡Gracias! Tus datos fueron enviados con éxito al asistente.");
+            this.reset();
+        } else {
+            alert("Ocurrió un error al enviar. Intenta por WhatsApp.");
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("Fallo de red. Intenta más tarde.");
+    }
+});
 
         // Intersection Observer for animations
         const observerOptions = {
